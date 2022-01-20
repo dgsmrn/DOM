@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog - Discover</title>
+</head>
+
+<body>
+    <h1 id="blog-title">Meu Blog</h1>
+    <h1 class="one">Meu Blog</h1>
+    <h1 class="two">Meu Blog</h1>
+    <p class="one">Conteúdo</p>
+
+    <script>
+        // getElementById() seleciona um elemento por id
+
+        const idElement = document.getElementById('blog-title')
+        console.log(idElement)
+
+        // getElementByClassName() seleciona diversos elementos pela classe (html collection)
+        const classElement = document.getElementsByClassName('one')
+        console.log(classElement)
+
+        // getElementsByTagName() seleciona elementos pelas tags
+        const tagElement = document.getElementsByTagName('h1')
+        console.log(tagElement)
+
+        // querySelector() seleciona por seletor o primeiro que ele achar
+        const queryElement = document.querySelector('.two')
+        console.log(queryElement)
+
+        // querySelectorAll() seleciona uma coleção de nós (nodelist), todos que ele encontrar. É possível usar um forEach() em um nodelist
+        const QsallElement = document.querySelectorAll('.one')
+        console.log(QsallElement)
+
+        //Qual usar?
+
+        // getElementById() {element}
+        // getElementByClassName() {html collection}
+        // getElementsByTagName() {html collection}
+        // querySelector() {element}
+        // querySelectorAll() {Nodelist} forEach
+
+    </script>
+</body>
+
+</html>
