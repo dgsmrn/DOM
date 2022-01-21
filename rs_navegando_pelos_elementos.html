@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <script>
+        //Navegando pelos elementos
+
+        // parentNode parentElement
+        const body = document.querySelector('body')
+
+        // pega o nó pai
+        console.log(body.parentNode)
+        console.log(body.parentElement)
+
+        // childNodes children pega o nó filho
+        const el = document.querySelector('body')
+
+        console.log(el.childNodes) // nodelist - considera espaços no código
+        console.log(el.children) // html collection - não considera espaços
+
+        console.log(el.firstChild) // considera espaços no código
+        console.log(el.firstElementChild) // não considera espaços
+
+        console.log(el.lastChild)
+        console.log(el.lastElementChild)
+        console.log('----')
+
+        // nextSibling nextElementSibling - pega o próximo irmão
+        const el2 = document.querySelector('header')
+        console.log(el2.nextSibling) // considera espaços no código
+        console.log(el2.nextElementSibling) // não considera espaços
+
+        // previousSibling previousElementSibling - pega o irmão anterior
+        const el3 = document.querySelector('body script')
+        console.log(el3.previousSibling) //considera espaços no código
+        console.log(el3.previousElementSibling) // não considera espaços
+
+    </script>
+</body>
+
+</html>

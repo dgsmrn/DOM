@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <script>
+        // Criando e adicionando elementos
+
+        // createElement
+        const div = document.createElement('div');
+        div.innerHTML = "Olá Devs!"
+
+        const div2 = document.createElement('div')
+        div2.innerHTML = "Meu Blog"
+
+        // append prepend
+        const body = document.querySelector('body')
+        body.append(div) //adiciona um elemento ao final do body
+        body.prepend(div2) //adiciona um elemento no inicio do body
+
+        // insertBefore
+        const div3 = document.createElement('div');
+        div3.innerHTML = "Estou no meio"
+        const body2 = document.querySelector('body')
+        const script = body.querySelector('script')
+        body.insertBefore(div3, script) // adiciona um elemento antes de outro
+
+        // Não existe um insertAfter porém pode ser simulado
+        const div4 = document.createElement('div');
+        div4.innerHTML = "Estou depois do header"
+
+        const body3 = document.querySelector('body')
+        const header = body.querySelector('header')
+        body.insertBefore(div4, header.nextElementSibling)
+
+    </script>
+</body>
+
+</html>

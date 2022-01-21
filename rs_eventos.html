@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 ondblclick="print()">Meu Blog</h1>
+        <h2>Meu Blog</h2>
+        <h3>Meu Blog</h3>
+        <h4>Meu Blog</h4>
+        <input type="text">
+    </header>
+    <script>
+        // Eventos
+
+        function print() {
+            console.log('print')
+        }
+
+        // Eventos de teclado
+        const input = document.querySelector('input')
+
+        input.onkeydown = function () { // onkeydown (quando aperta) onkeyup (quando solta)  onkeypress (quando aperta)
+            console.log('rodei')
+        }
+
+        // Adicionando eventos via Javascript
+        const h2 = document.querySelector('h2');
+        h2.addEventListener('click', print2) //
+        function print2() {
+            console.log('print2')
+        }
+
+        // Outra forma de executar eventos - desta forma será executado o ultimo evento encontrado no caso a função anonima que escreve 'outro momento'
+        const h3 = document.querySelector('h3');
+
+        h3.onclick = print3
+        function print3() {
+            console.log('print3')
+        }
+
+        h3.onclick = function () {
+            console.log('outro momento')
+        }
+
+        // com o addEventListener ele empilha e executa todas que existirem no documento
+        const h4 = document.querySelector('h4')
+
+        h4.addEventListener('click', print4)
+
+        function print4() {
+            console.log('print4')
+        }
+
+        h4.addEventListener('click', function () { console.log('outro momento') })
+
+        // argumento event
+        const input2 = document.querySelector('input')
+        input2.onkeypress = function(event){
+            console.log(event)
+            console.log(event.key)
+            console.log(event.currentTarget)
+            console.log(event.currentTarget.value)
+        }
+    </script>
+</body>
+
+</html>
