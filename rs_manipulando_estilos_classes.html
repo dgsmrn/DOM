@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: red;        
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+        <h2>Meu Blog</h2>        
+    </header>
+
+    <script>
+        // Alterando estilos
+        const element = document.querySelector('body')
+
+            //atribuir css inline (style="")
+            element.style.backgroundColor = "#f9f3d2"
+
+            //pegar o valor de ume estilo
+            console.log(element.style.backgroundColor)
+
+        
+        // classList
+        const element2 = document.querySelector('body')
+
+            // adicionar classe
+            element2.classList.add('active', 'green') // se remover o css inline que tem mais peso o body pega a classe green
+            console.log(element2.classList)
+
+            // remover classe
+            element2.classList.remove('active')
+
+            // se a classe existir ele tira se não ele adiciona
+            element2.classList.toggle('active')
+            
+    </script>
+</body>
+
+</html>

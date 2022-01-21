@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            color: red;
+        }
+        .bg{
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg">
+        <h4>Meu Blog</h4>
+    </header>
+    <h1>Meu Blog</h1>
+    <h2>Meu Blog</h2>
+    <h3>Meu Blog</h3>
+    <input type="text" value="Estou no elemento">
+    <script>
+        // Manipulando Conteúdo
+
+        // textContent altera o conteúdo de texto
+        const textElement = document.querySelector('h1')
+        textElement.textContent += " Olá Devs!"
+        console.log(textElement.textContent)
+
+        // innerText altera o conteúdo de texto
+        const innerElement = document.querySelector('h2')
+        innerElement.innerText = "Olá Devs!"
+        console.log(innerElement.innerText)
+
+        // innerHTML altera o conteúdo HTML
+        const htmlElement = document.querySelector('h3')
+        htmlElement.innerHTML = "Olá Devs! <small>!!!</small>"
+
+        // value manipula valor de um input
+        const inputElement = document.querySelector('input')
+        
+            //pegar o valor
+            console.log(inputElement.value)
+        
+            //atribuir o valor
+            inputElement.value = "outro valor"
+
+        // atributos
+        const header = document.querySelector('header')
+            // setar um atributo id ou class
+            header.setAttribute('id', 'header')            
+
+            // procurando por um id e escrevendo no console
+            const headerId = document.querySelector('#header')
+            console.log(headerId)
+
+            // verificado o nome do atributo
+            console.log(headerId.getAttribute('id'))
+            console.log(headerId.getAttribute('class'))
+
+            // remover um atributo
+            header.removeAttribute('id')
+            header.removeAttribute('class')
+
+    </script>
+</body>
+
+</html>
